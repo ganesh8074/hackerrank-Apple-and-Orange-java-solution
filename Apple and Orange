@@ -1,0 +1,46 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class solution
+{
+    public static void main(String args[])
+    {
+        Scanner in=new Scanner(System.in);
+        int s=in.nextInt();
+        int t=in.nextInt();
+        int a=in.nextInt();
+        int b=in.nextInt();
+        int m=in.nextInt();
+        int n=in.nextInt();
+        int ar1[]=new int[m];
+        int ar2[]=new int[n];
+        for(int i=0;i<m;i++)
+        {
+            ar1[i]=in.nextInt();
+        }
+        for(int j=0;j<n;j++)
+        {
+            ar2[j]=in.nextInt();
+        }
+        int counta=0,countb=0;
+        for(int i=0;i<m;i++)
+        {
+            ar1[i]+=a;
+            if(s<=ar1[i] && ar1[i]<=t)
+            counta++;
+        }
+        for(int j=0;j<n;j++)
+        {
+            ar2[j]+=b;
+            if(s<=ar2[j] && ar2[j]<=t)
+            countb++;
+        }
+        System.out.println(counta);
+        System.out.println(countb);
+    }
+}
